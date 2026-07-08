@@ -11,8 +11,6 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 38E9024D21344637005DF76A /* Build configuration list for PBXAggregateTarget "ScriptSupport" */;
 			buildPhases = (
-				382AF2C12156269F00701F90 /* Generate Version.xcconfig */,
-				38E9024E21344640005DF76A /* Print environment variables */,
 			);
 			dependencies = (
 			);
@@ -1013,20 +1011,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		382AF2C12156269F00701F90 /* Generate Version.xcconfig */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Generate Version.xcconfig";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd ${PROJECT_DIR}\ntag=`git describe --tags`\ntag=${tag#GureumKIM-}\nif [ $CONFIGURATION != \"Release\" ]; then\n    tag=\"$tag\"-Debug\nfi\necho \"VERSION = $tag\" > OSX/Version.xcconfig\n";
-		};
 		388186D521EB3FFF004B7FDB /* Compile Gureum CLI */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1042,20 +1026,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "swiftc -O \"${SRCROOT}/tools/gureum-cli.swift\" -o \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app/Contents/MacOS/gureum-cli\"\n";
-		};
-		38E9024E21344640005DF76A /* Print environment variables */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Print environment variables";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
 		CE31CC0B281099D9004659B0 /* Run Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
