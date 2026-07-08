@@ -63,7 +63,7 @@ class GureumAppDelegate: NSObject, NSApplicationDelegate, GureumApplicationDeleg
       // Fabric.with([Crashlytics.self, Answers.self])
     #endif
 
-    UpdateManager.shared.notifyUpdateIfNeeded()
+    //     UpdateManager.shared.notifyUpdateIfNeeded()
 
     // 입력 모니터링 권한 요청
     if #available(macOS 10.15, *) {
