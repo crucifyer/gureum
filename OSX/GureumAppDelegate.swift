@@ -45,8 +45,8 @@ class GureumAppDelegate: NSObject, NSApplicationDelegate, GureumApplicationDeleg
   let notificationCenterDelegate = NotificationCenterDelegate()
 
   func applicationDidFinishLaunching(_: Notification) {
-    FirebaseApp.configure()
-    UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": true])
+    //     FirebaseApp.configure()
+    //     UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": true])
 
     NSUserNotificationCenter.default.delegate = notificationCenterDelegate
     let notificationCenter = NSUserNotificationCenter.default
