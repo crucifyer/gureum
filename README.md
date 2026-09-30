@@ -26,6 +26,9 @@ git clone https://github.com/crucifyer/gureum.git
 cd gureum
 # 환경 설치
 make init
+# 버전 수정
+perl -pi -e "s/MACOSX_DEPLOYMENT_TARGET = .*?;/MACOSX_DEPLOYMENT_TARGET = 26;/g" hangeul/cdebug/supports/debug.xcodeproj/project.pbxproj
+perl -pi -e "s/MACOSX_DEPLOYMENT_TARGET = .*?;/MACOSX_DEPLOYMENT_TARGET = 26;/g" libhangul-objc/Hangul.xcodeproj/project.pbxproj
 # 빌드 및 설치
 ./local-build.sh
 ```
